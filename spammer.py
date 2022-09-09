@@ -16,6 +16,7 @@ except ModuleNotFoundError:
 
 init(autoreset=True)
 os.system('cls')
+# os.system('clear') For Mac/Linux
 r = requests.Session()
 
 logo = f"""{Fore.LIGHTCYAN_EX}
@@ -66,6 +67,7 @@ class InstagramSpammer:
         data = f"thread_ids=[{thread_id}]&text={msg}"
 
         os.system('cls')
+        # os.system('clear') For Mac/Linux
         
         spamming_logo = f"""{Fore.LIGHTCYAN_EX}
          _____ _____ _____ _____ 
@@ -94,6 +96,7 @@ def main():
 
     spammer.login(username=username, password=password)
     os.system('cls')
+    # os.system('clear') For Mac/Linux
 
     data_logo = f"""{Fore.LIGHTCYAN_EX}
      ____  _____ _____ _____ 
