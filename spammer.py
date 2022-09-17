@@ -1,8 +1,4 @@
-import os
-import time
-import random
-import uuid
-import stdiomask
+import os, time, random, uuid, stdiomask, platform
 from threading import Thread
 
 try:
@@ -15,8 +11,7 @@ except ModuleNotFoundError:
     from colorama import Fore, init
 
 init(autoreset=True)
-os.system('cls')
-# os.system('clear') For Mac/Linux
+os.system("cls" if platform.system() == "Windows" else "clear")
 r = requests.Session()
 
 logo = f"""{Fore.LIGHTCYAN_EX}
@@ -52,7 +47,7 @@ class InstagramSpammer:
             time.sleep(3)
             exit()
 
-        os.system('cls')
+        os.system("cls" if platform.system() == "Windows" else "clear")
 
     def spammer(self, thread_id, msg):
         count = 0
@@ -66,8 +61,7 @@ class InstagramSpammer:
 
         data = f"thread_ids=[{thread_id}]&text={msg}"
 
-        os.system('cls')
-        # os.system('clear') For Mac/Linux
+        os.system("cls" if platform.system() == "Windows" else "clear")
         
         spamming_logo = f"""{Fore.LIGHTCYAN_EX}
          _____ _____ _____ _____ 
@@ -95,8 +89,7 @@ def main():
     password = stdiomask.getpass(prompt=f"[{Fore.LIGHTRED_EX} + {Fore.RESET}] Password: ", mask='*')
 
     spammer.login(username=username, password=password)
-    os.system('cls')
-    # os.system('clear') For Mac/Linux
+    os.system("cls" if platform.system() == "Windows" else "clear")
 
     data_logo = f"""{Fore.LIGHTCYAN_EX}
      ____  _____ _____ _____ 
